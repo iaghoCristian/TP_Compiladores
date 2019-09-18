@@ -1,5 +1,9 @@
 lexer grammar Scanner;
 
+ID_ERROR: (DIGITO)+ (LETRA)+;
+OP_ERROR: (OPERATORS) (OPERATORS)+;
+REAL_ERROR: '0' (DIGITO)+;
+
 ABS: 'abstract';
 BOOL: 'boolean';
 CHAR: 'char';
@@ -38,7 +42,6 @@ OPSOMA: '+';
 OPMAISI: '+=';
 OPASTE: '*';
 
-
 SEVIRG: ',';
 SEPONTO: '.';
 SEACOLC: '[';
@@ -52,11 +55,12 @@ SEDOISP: ';';
 ID: (LETRA|'_'|'$')(LETRA|DIGITO|'_'|'$')*;
 fragment LETRA: ('a'..'z' | 'A'..'Z');
 fragment DIGITO: ('0'..'9');
-Numero: (DIGITO)(DIGITO)*;
+fragment OPERATORS: ('='|'=='|'>'|'++'|'&&'|'<='|'!'|'-'|'--'|'+'|'+='|'*');
 ESPACO: ( ' ' | '\u000C')+ -> skip;
-NL: ('\n'| '\r'| '\t' | '\b' |'\f') -> skip;
+NL: ('\n'| '\r'| '\t' | '\b' |'\f' | '\'' | ' \\ ') -> skip;
 COMENTARIO: '//' (~('\n' | '\r'))* -> skip;
+INTLITE: ('0' | ('1'..'9'))(DIGITO)*;
+CHARLITERAL: ( '\''(NL | ~( '\'' | '\\' | '\n' | '\r')) '\'');
+SRINGLITERAL: ( '\"'(NL | ~( '"' | '\\' | '\n' | '\r'))* '"');
 
-
-INTLITE: '0 | (1-9){0-9}';
-
+GERAL_ERROR2: ('\r'..'~');
