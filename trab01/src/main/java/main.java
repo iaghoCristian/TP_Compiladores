@@ -11,7 +11,7 @@ public class main {
     public static void main( String[] args ) throws IOException {
         int idID = 49;
         // Transforma o arquivo em um charstream
-        String fileName = "./Files/teste.txt";
+        String fileName = "./Files/testeC.txt";
         CharStream charstream = CharStreams.fromFileName(fileName);
 
         // Gera uma lista de tokens com base no scanner
@@ -21,9 +21,9 @@ public class main {
         List<Token> tokens = commontokenstream.getTokens();
 
 //        // imprime os tokens
-//        for (int i =0; i < tokens.size(); ++i){
-//            System.out.println(tokens.get(i));
-//        }
+ //       for (int i =0; i < tokens.size(); ++i){
+  //          System.out.println(tokens.get(i));
+   //     }
 
         //
         TabelaDeSimbolos table = new TabelaDeSimbolos();

@@ -31,7 +31,8 @@ public class auxiliar {
         int idError = 1;
         int opErro = 2;
         int realError = 3;
-        int geralError = 56;
+        int geralError = 57;
+        int idError2 = 4;
         ArrayList<String> errors = new ArrayList<String>();
         for (int i = 0; i < token.size() - 1; ++i) {
             switch (token.get(i).getType()) {
@@ -40,16 +41,19 @@ public class auxiliar {
                     errors.add("Could not recognize " + token.get(i).getText() + " in line " + token.get(i).getLine() + " " + token.get(i).getCharPositionInLine());
                     break;
                 // caso seja um erro no operador
-                case 2:
+                case 56:
                     errors.add ("Didnt understand what the operator " + token.get(i).getText() + " was meant to be in line " + token.get(i).getLine() + " " + token.get(i).getCharPositionInLine());
                     break;
                 // caso seja um erro de numero comecando com 0
-                case 3:
+                case 2:
                     errors.add("Num error in " + token.get(i).getText() + " in line " + token.get(i).getLine() + " " + token.get(i).getCharPositionInLine());
                     break;
                 // caso seja um caracter n conhecido
-                case 56:
+                case 57:
                     errors.add("Could not recognize " + token.get(i).getText() + " in line " + token.get(i).getLine() + " " + token.get(i).getCharPositionInLine());
+                    break;
+                case 3:
+                    errors.add("ID cannot starts with uppercase letter " + token.get(i).getText() + " in line " + token.get(i).getLine() + " " + token.get(i).getCharPositionInLine());
                     break;
                 // caso não tenha nenhum erro
                 default:
