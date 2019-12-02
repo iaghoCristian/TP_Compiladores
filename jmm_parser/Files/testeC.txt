@@ -1,0 +1,15 @@
+abstract boolean char class else extends false
+import if instanceof int new null package
+private protected public return static super this
+true void while
+= == > ++ && <= ! - -- + += *
+, . [ ] { } ( ) ;
+
+variavel
+aaaa
+9
+13
+0
+'a'
+"string"
+e1aa

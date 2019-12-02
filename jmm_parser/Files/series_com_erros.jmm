@@ -1,0 +1,47 @@
+// Este é um programa válido em Java--
+
+package pass;
+
+import java.lang.Integer;
+import java.lang.System;
+
+public class Series {
+    public static int ARITHMETIC = 1 // Erro sintático 1: Falta ;
+    public static GEOMETRIC = 2; // Erro sintático 2: Falta o tipo
+    private int a;
+    private int; // Erro sintático 3: Falta o identificador
+    private int n;
+
+    public Series() {
+        this(1, 1; 10); // Erro sintático 4: Foi usado ; no lugar de ,
+    }
+
+    public Series(int a, int d, int n) {
+        this.a = a;
+        this.d = d;
+        this.n = n;
+
+    public int computeSum(int kind) { // Erro sintático 5: Falta fechar a chave construtor anterior
+        int sum = a, t = a, i = n;
+        else{                         // Erro sintático 6: "else" sem um "if" antecedente
+            pass;
+        }
+        while (i-- > 1 {             // Erro sintático 7: faltou fechar parênteses
+            if (kind == ARITHMETIC) {
+                t += d;
+            } else if (kind == GEOMETRIC) {
+                t = t * d;
+            }
+            sum += t;
+        }                       // Erro sintático 8: faltou informar a variável ou valor retornado
+    }
+
+    public static void main(String[] args) {
+        int a  Integer.parseInt(args[0]); // Erro sintático 9: faltou o sinal de atribuição
+        int d = Integer.parseInt(args[1]);
+        int n = Integer.parseInt(args[2]);
+        Series s = new Series(a, d, n);
+        System.out.(" Arithmetic sum = " + s.computeSum(Series.ARITHMETIC)); // Erro sintático 10: faltou o "println"
+        System.out.println(" Geometric sum = " + s.computeSum(Series.GEOMETRIC));
+    }
+}
