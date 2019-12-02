@@ -21,7 +21,7 @@ public class Series {
         this.d = d;
         this.n = n;
 
-    public int computeSum(int kind) { // Erro sintático 5: Falta fechar a chave construtor anterior
+    public int computeSum(int kind) { // Erro sintático 5: Falta fechar a chave do construtor anterior
         int sum = a, t = a, i = n;
         else{                         // Erro sintático 6: "else" sem um "if" antecedente
             pass;
