@@ -8,16 +8,17 @@ public class TabelaDeSimbolos {
         this.tabela = new Hashtable();
     }
 
-    public void inserir(String lexema, int tipo, int linha, int coluna) {
+    public void inserir(String lexema, String tipo, int linha, int coluna) {
         /*
             Cria uma nova "LinhaDeTabelaDeSimbolos", se "lexema" ainda não estiver em "tabela",
             com os parâmetros recebidos e a adiciona à "tabela", cada entrada é da
             seguinte forma <chave, valor> = <lexema, entrada_correspondente>
          */
         LinhaDeTabelaDeSimbolos novaLinha = null;
-        if (!tabela.containsKey(lexema))
+        if (!tabela.containsKey(lexema)) {
             novaLinha = new LinhaDeTabelaDeSimbolos(lexema, tipo, linha, coluna);
-        tabela.put(lexema, novaLinha);
+            tabela.put(lexema, novaLinha);
+        }
     }
 
     public LinhaDeTabelaDeSimbolos getLinha(String lexema) {

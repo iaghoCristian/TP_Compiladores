@@ -39,27 +39,32 @@ public class main {
         // ANÁLISE SINTÁTICA
         JMMParserParser parser = new JMMParserParser(commontokenstream);
         JMMParserParser.CompilationUnitContext tree = parser.compilationUnit();
-        tree.toStringTree();
+        // System.out.println(tree.toStringTree());
         MeuVisitor visitor = new MeuVisitor();
         visitor.visit(tree);
 
-        /*//se não existirem erros, exibe a tabela de símbolos
-        if(lexicalErrors.isEmpty()) {
-            System.out.println("Compiled with succes");
-            for (int i =0; i < tokens.size(); ++i) {
-                if (tokens.get(i).getType() == idID ){
-                    table.inserir(tokens.get(i).getText(), 0, tokens.get(i).getLine(), tokens.get(i).getStartIndex());
+        //se não existirem erros, exibe a tabela de símbolos
+        if(lexicalErrors.isEmpty() && !visitor.hasError()) {
+            System.out.println("Synctactic parsing completed with success");
+            for (int i = 0; i < tokens.size(); ++i) {
+                if (tokens.get(i).getType() == idID ) {
+                    String idType = "__";
+                    if(i > 0 && (tokens.get(i-1).getType() == lexer.BOOL || tokens.get(i-1).getType() == lexer.INT
+                    || tokens.get(i-1).getType() == lexer.CHAR)){
+                        idType = tokens.get(i-1).getText();
+                    }
+                    table.inserir(tokens.get(i).getText(), idType, tokens.get(i).getLine(), tokens.get(i).getCharPositionInLine());
                 }
             }
             System.out.println(table);
         }
-        // caso contrário exibe os erros
+        // caso contrário exibe os erros léxicos, lembrando que os erros sintáticos serão exibidos automaticamente
+        // caso existam
         else{
-
             for (int i = 0; i < lexicalErrors.size(); ++i){
                 System.out.println(lexicalErrors.get(i));
             }
-        }*/
+        }
     }
 
 }

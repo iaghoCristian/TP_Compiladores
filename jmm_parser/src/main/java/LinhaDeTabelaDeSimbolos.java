@@ -1,10 +1,10 @@
 public class LinhaDeTabelaDeSimbolos {
     private String lexema;
-    private int tipo;
+    private String tipo;
     private int linha;
     private int coluna;
 
-    public LinhaDeTabelaDeSimbolos(String lexema, int tipo, int linha, int coluna){
+    public LinhaDeTabelaDeSimbolos(String lexema, String tipo, int linha, int coluna){
         this.lexema = lexema;
         this.tipo = tipo;
         this.linha = linha;
@@ -19,11 +19,11 @@ public class LinhaDeTabelaDeSimbolos {
         this.lexema = lexema;
     }
 
-    public int getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 

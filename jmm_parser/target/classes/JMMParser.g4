@@ -64,8 +64,8 @@ COMENTARIO: '//' (~('\n' | '\r'))* -> skip;
 INTLITE: ('0' | ('1'..'9'))(DIGITO)*;
 CHARLITERAL: ( '\''(NL | ~( '\'' | '\\' | '\n' | '\r')) '\'');
 SRINGLITERAL: ( '"'(NL | ~( '"' | '\\' | '\n' | '\r'))* '"');
-MULTIOPERATOR_ERROR: OPERATORS OPERATORS+;
 
+MULTIOPERATOR_ERROR: OPERATORS OPERATORS+;
 UNKNOWN_CHARACTER_ERROR: ('\r'..'~');
 
 

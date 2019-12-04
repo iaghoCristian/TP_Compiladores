@@ -1,4 +1,4 @@
-// Generated from /home/marcio/Documentos/UFLA/2019_2/compiladores/TP/TP_Compiladores/trab01/src/main/resources/JMMParser.g4 by ANTLR 4.7.2
+// Generated from /home/marcio/Documentos/UFLA/2019_2/compiladores/TP/TP_Compiladores/jmm_parser/src/main/resources/JMMParser.g4 by ANTLR 4.7.2
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;

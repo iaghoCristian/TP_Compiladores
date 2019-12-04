@@ -1,25 +1,15 @@
+import org.antlr.v4.runtime.tree.ErrorNode;
+
 public class MeuVisitor extends JMMParserBaseVisitor {
-   /* @Override
-    public Object visitClassBody(JMMParserParser.ClassBodyContext ctx) {
-        System.out.println("Visting class body");
-        return super.visitClassBody(ctx);
-    }
+    private boolean hasError = false;
 
     @Override
-    public Object visitMemberDecl(JMMParserParser.MemberDeclContext ctx) {
-        System.out.println("Visiting visitMemberDecl");
-        return super.visitMemberDecl(ctx);
+    public Object visitErrorNode(ErrorNode node) {
+        this.hasError = true;
+        return super.visitErrorNode(node);
     }
 
-    @Override
-    public Object visitVariableDeclarators(JMMParserParser.VariableDeclaratorsContext ctx) {
-        System.out.println("Visiting visitVariableDeclarators");
-        return super.visitVariableDeclarators(ctx);
+    public boolean hasError(){
+        return this.hasError;
     }
-
-    @Override
-    public Object visitAdditiveExpression(JMMParserParser.AdditiveExpressionContext ctx) {
-        System.out.println("aaa");
-        return super.visitAdditiveExpression(ctx);
-    }*/
 }

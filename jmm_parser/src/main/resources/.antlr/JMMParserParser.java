@@ -1,4 +1,4 @@
-// Generated from /home/marcio/Documentos/UFLA/2019_2/compiladores/TP/TP_Compiladores/jmm_parser/src/main/resources/JMMParser.g4 by ANTLR 4.7.2
+// Generated from /home/marcio/Documentos/UFLA/2019_2/compiladores/TP/TP_Compiladores/jmm_parser/src/main/resources/JMMParser.g4 by ANTLR 4.7.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class JMMParserParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -23,8 +23,8 @@ public class JMMParserParser extends Parser {
 		OPMAISM=30, OPAND=31, OPMENOI=32, OPDIFEF=33, OPSUBTR=34, OPMENOSM=35, 
 		OPSOMA=36, OPMAISI=37, OPASTE=38, SEVIRG=39, SEPONTO=40, SEACOLC=41, SEACHAV=42, 
 		SEAPARE=43, SEFPARE=44, SEFCHAV=45, SEFCOLC=46, SEPONTOEVIRG=47, SEDOISPONTOS=48, 
-		ID=49, ESPACO=50, NL=51, COMENTARIO=52, INTLITE=53, CHARLITERAL=54, SRINGLITERAL=55, 
-		MULTIOPERATOR_ERROR=56, UNKNOWN_CHARACTER_ERROR=57;
+		RESERVED_WORD=49, ID=50, ESPACO=51, NL=52, COMENTARIO=53, INTLITE=54, 
+		CHARLITERAL=55, SRINGLITERAL=56, MULTIOPERATOR_ERROR=57, UNKNOWN_CHARACTER_ERROR=58;
 	public static final int
 		RULE_compilationUnit = 0, RULE_qualifiedIdentifier = 1, RULE_typeDeclaration = 2, 
 		RULE_modifiers = 3, RULE_classDeclaration = 4, RULE_classBody = 5, RULE_memberDecl = 6, 
@@ -38,48 +38,38 @@ public class JMMParserParser extends Parser {
 		RULE_unaryExpression = 30, RULE_simpleUnaryExpression = 31, RULE_postfixExpression = 32, 
 		RULE_selector = 33, RULE_primary = 34, RULE_creator = 35, RULE_newArrayDeclarator = 36, 
 		RULE_literal = 37;
-	private static String[] makeRuleNames() {
-		return new String[] {
-			"compilationUnit", "qualifiedIdentifier", "typeDeclaration", "modifiers", 
-			"classDeclaration", "classBody", "memberDecl", "block", "blockStatement", 
-			"statement", "formalParameters", "formalParameter", "parExpression", 
-			"localVariableDeclarationStatement", "variableDeclarators", "variableDeclarator", 
-			"variableInitializer", "arrayInitializer", "arguments", "type", "basicType", 
-			"referenceType", "statementExpression", "expression", "assignmentExpression", 
-			"conditionalAndExpression", "equalityExpression", "relationalExpression", 
-			"additiveExpression", "multiplicativeExpression", "unaryExpression", 
-			"simpleUnaryExpression", "postfixExpression", "selector", "primary", 
-			"creator", "newArrayDeclarator", "literal"
-		};
-	}
-	public static final String[] ruleNames = makeRuleNames();
+	public static final String[] ruleNames = {
+		"compilationUnit", "qualifiedIdentifier", "typeDeclaration", "modifiers", 
+		"classDeclaration", "classBody", "memberDecl", "block", "blockStatement", 
+		"statement", "formalParameters", "formalParameter", "parExpression", "localVariableDeclarationStatement", 
+		"variableDeclarators", "variableDeclarator", "variableInitializer", "arrayInitializer", 
+		"arguments", "type", "basicType", "referenceType", "statementExpression", 
+		"expression", "assignmentExpression", "conditionalAndExpression", "equalityExpression", 
+		"relationalExpression", "additiveExpression", "multiplicativeExpression", 
+		"unaryExpression", "simpleUnaryExpression", "postfixExpression", "selector", 
+		"primary", "creator", "newArrayDeclarator", "literal"
+	};
 
-	private static String[] makeLiteralNames() {
-		return new String[] {
-			null, null, null, "'abstract'", "'boolean'", "'char'", "'class'", "'else'", 
-			"'extends'", "'false'", "'import'", "'if'", "'instanceof'", "'int'", 
-			"'new'", "'null'", "'package'", "'private'", "'protected'", "'public'", 
-			"'return'", "'static'", "'super'", "'this'", "'true'", "'void'", "'while'", 
-			"'='", "'=='", "'>'", "'++'", "'&&'", "'<='", "'!'", "'-'", "'--'", "'+'", 
-			"'+='", "'*'", "','", "'.'", "'['", "'{'", "'('", "')'", "'}'", "']'", 
-			"';'", "':'"
-		};
-	}
-	private static final String[] _LITERAL_NAMES = makeLiteralNames();
-	private static String[] makeSymbolicNames() {
-		return new String[] {
-			null, "ID_STARTSWITHDIGIT_ERROR", "INT_STARTSWITHZERO_ERROR", "ABS", 
-			"BOOL", "CHAR", "CLAS", "ELSE", "EXTE", "FALS", "IMPO", "IF", "INST", 
-			"INT", "NEW", "NULL", "PACK", "PRIV", "PROT", "PUBL", "RETU", "STAT", 
-			"SUPE", "THIS", "TRUE", "VOID", "WHIL", "OPIGUAL", "OPATRIB", "OPMAIOR", 
-			"OPMAISM", "OPAND", "OPMENOI", "OPDIFEF", "OPSUBTR", "OPMENOSM", "OPSOMA", 
-			"OPMAISI", "OPASTE", "SEVIRG", "SEPONTO", "SEACOLC", "SEACHAV", "SEAPARE", 
-			"SEFPARE", "SEFCHAV", "SEFCOLC", "SEPONTOEVIRG", "SEDOISPONTOS", "ID", 
-			"ESPACO", "NL", "COMENTARIO", "INTLITE", "CHARLITERAL", "SRINGLITERAL", 
-			"MULTIOPERATOR_ERROR", "UNKNOWN_CHARACTER_ERROR"
-		};
-	}
-	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
+	private static final String[] _LITERAL_NAMES = {
+		null, null, null, "'abstract'", "'boolean'", "'char'", "'class'", "'else'", 
+		"'extends'", "'false'", "'import'", "'if'", "'instanceof'", "'int'", "'new'", 
+		"'null'", "'package'", "'private'", "'protected'", "'public'", "'return'", 
+		"'static'", "'super'", "'this'", "'true'", "'void'", "'while'", "'='", 
+		"'=='", "'>'", "'++'", "'&&'", "'<='", "'!'", "'-'", "'--'", "'+'", "'+='", 
+		"'*'", "','", "'.'", "'['", "'{'", "'('", "')'", "'}'", "']'", "';'", 
+		"':'"
+	};
+	private static final String[] _SYMBOLIC_NAMES = {
+		null, "ID_STARTSWITHDIGIT_ERROR", "INT_STARTSWITHZERO_ERROR", "ABS", "BOOL", 
+		"CHAR", "CLAS", "ELSE", "EXTE", "FALS", "IMPO", "IF", "INST", "INT", "NEW", 
+		"NULL", "PACK", "PRIV", "PROT", "PUBL", "RETU", "STAT", "SUPE", "THIS", 
+		"TRUE", "VOID", "WHIL", "OPIGUAL", "OPATRIB", "OPMAIOR", "OPMAISM", "OPAND", 
+		"OPMENOI", "OPDIFEF", "OPSUBTR", "OPMENOSM", "OPSOMA", "OPMAISI", "OPASTE", 
+		"SEVIRG", "SEPONTO", "SEACOLC", "SEACHAV", "SEAPARE", "SEFPARE", "SEFCHAV", 
+		"SEFCOLC", "SEPONTOEVIRG", "SEDOISPONTOS", "RESERVED_WORD", "ID", "ESPACO", 
+		"NL", "COMENTARIO", "INTLITE", "CHARLITERAL", "SRINGLITERAL", "MULTIOPERATOR_ERROR", 
+		"UNKNOWN_CHARACTER_ERROR"
+	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
@@ -129,7 +119,6 @@ public class JMMParserParser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
-
 	public static class CompilationUnitContext extends ParserRuleContext {
 		public TerminalNode EOF() { return getToken(JMMParserParser.EOF, 0); }
 		public TerminalNode PACK() { return getToken(JMMParserParser.PACK, 0); }
@@ -157,19 +146,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_compilationUnit; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterCompilationUnit(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitCompilationUnit(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitCompilationUnit(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CompilationUnitContext compilationUnit() throws RecognitionException {
@@ -245,27 +221,10 @@ public class JMMParserParser extends Parser {
 		public TerminalNode ID(int i) {
 			return getToken(JMMParserParser.ID, i);
 		}
-		public List<TerminalNode> SEPONTO() { return getTokens(JMMParserParser.SEPONTO); }
-		public TerminalNode SEPONTO(int i) {
-			return getToken(JMMParserParser.SEPONTO, i);
-		}
 		public QualifiedIdentifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_qualifiedIdentifier; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterQualifiedIdentifier(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitQualifiedIdentifier(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitQualifiedIdentifier(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final QualifiedIdentifierContext qualifiedIdentifier() throws RecognitionException {
@@ -319,19 +278,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_typeDeclaration; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterTypeDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitTypeDeclaration(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitTypeDeclaration(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TypeDeclarationContext typeDeclaration() throws RecognitionException {
@@ -382,19 +328,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_modifiers; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterModifiers(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitModifiers(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitModifiers(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ModifiersContext modifiers() throws RecognitionException {
@@ -440,12 +373,10 @@ public class JMMParserParser extends Parser {
 	}
 
 	public static class ClassDeclarationContext extends ParserRuleContext {
-		public TerminalNode CLAS() { return getToken(JMMParserParser.CLAS, 0); }
 		public TerminalNode ID() { return getToken(JMMParserParser.ID, 0); }
 		public ClassBodyContext classBody() {
 			return getRuleContext(ClassBodyContext.class,0);
 		}
-		public TerminalNode EXTE() { return getToken(JMMParserParser.EXTE, 0); }
 		public QualifiedIdentifierContext qualifiedIdentifier() {
 			return getRuleContext(QualifiedIdentifierContext.class,0);
 		}
@@ -453,19 +384,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_classDeclaration; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterClassDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitClassDeclaration(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitClassDeclaration(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ClassDeclarationContext classDeclaration() throws RecognitionException {
@@ -507,8 +425,6 @@ public class JMMParserParser extends Parser {
 	}
 
 	public static class ClassBodyContext extends ParserRuleContext {
-		public TerminalNode SEACHAV() { return getToken(JMMParserParser.SEACHAV, 0); }
-		public TerminalNode SEFCHAV() { return getToken(JMMParserParser.SEFCHAV, 0); }
 		public List<ModifiersContext> modifiers() {
 			return getRuleContexts(ModifiersContext.class);
 		}
@@ -525,19 +441,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_classBody; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterClassBody(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitClassBody(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitClassBody(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ClassBodyContext classBody() throws RecognitionException {
@@ -588,7 +491,6 @@ public class JMMParserParser extends Parser {
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
 		}
-		public TerminalNode VOID() { return getToken(JMMParserParser.VOID, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
@@ -600,19 +502,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_memberDecl; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterMemberDecl(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitMemberDecl(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitMemberDecl(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final MemberDeclContext memberDecl() throws RecognitionException {
@@ -718,19 +607,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_block; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterBlock(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitBlock(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitBlock(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final BlockContext block() throws RecognitionException {
@@ -782,19 +658,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_blockStatement; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterBlockStatement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitBlockStatement(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitBlockStatement(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final BlockStatementContext blockStatement() throws RecognitionException {
@@ -861,19 +724,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_statement; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterStatement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitStatement(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitStatement(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final StatementContext statement() throws RecognitionException {
@@ -1001,19 +851,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_formalParameters; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterFormalParameters(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitFormalParameters(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitFormalParameters(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final FormalParametersContext formalParameters() throws RecognitionException {
@@ -1075,19 +912,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_formalParameter; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterFormalParameter(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitFormalParameter(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitFormalParameter(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final FormalParameterContext formalParameter() throws RecognitionException {
@@ -1114,28 +938,13 @@ public class JMMParserParser extends Parser {
 	}
 
 	public static class ParExpressionContext extends ParserRuleContext {
-		public TerminalNode SEAPARE() { return getToken(JMMParserParser.SEAPARE, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode SEFPARE() { return getToken(JMMParserParser.SEFPARE, 0); }
 		public ParExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_parExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterParExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitParExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitParExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ParExpressionContext parExpression() throws RecognitionException {
@@ -1170,24 +979,10 @@ public class JMMParserParser extends Parser {
 		public VariableDeclaratorsContext variableDeclarators() {
 			return getRuleContext(VariableDeclaratorsContext.class,0);
 		}
-		public TerminalNode SEPONTOEVIRG() { return getToken(JMMParserParser.SEPONTOEVIRG, 0); }
 		public LocalVariableDeclarationStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_localVariableDeclarationStatement; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterLocalVariableDeclarationStatement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitLocalVariableDeclarationStatement(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitLocalVariableDeclarationStatement(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final LocalVariableDeclarationStatementContext localVariableDeclarationStatement() throws RecognitionException {
@@ -1222,27 +1017,10 @@ public class JMMParserParser extends Parser {
 		public VariableDeclaratorContext variableDeclarator(int i) {
 			return getRuleContext(VariableDeclaratorContext.class,i);
 		}
-		public List<TerminalNode> SEVIRG() { return getTokens(JMMParserParser.SEVIRG); }
-		public TerminalNode SEVIRG(int i) {
-			return getToken(JMMParserParser.SEVIRG, i);
-		}
 		public VariableDeclaratorsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_variableDeclarators; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterVariableDeclarators(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitVariableDeclarators(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitVariableDeclarators(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final VariableDeclaratorsContext variableDeclarators() throws RecognitionException {
@@ -1285,7 +1063,6 @@ public class JMMParserParser extends Parser {
 
 	public static class VariableDeclaratorContext extends ParserRuleContext {
 		public TerminalNode ID() { return getToken(JMMParserParser.ID, 0); }
-		public TerminalNode OPIGUAL() { return getToken(JMMParserParser.OPIGUAL, 0); }
 		public VariableInitializerContext variableInitializer() {
 			return getRuleContext(VariableInitializerContext.class,0);
 		}
@@ -1293,19 +1070,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_variableDeclarator; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterVariableDeclarator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitVariableDeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitVariableDeclarator(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final VariableDeclaratorContext variableDeclarator() throws RecognitionException {
@@ -1353,19 +1117,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_variableInitializer; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterVariableInitializer(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitVariableInitializer(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitVariableInitializer(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final VariableInitializerContext variableInitializer() throws RecognitionException {
@@ -1418,35 +1169,16 @@ public class JMMParserParser extends Parser {
 	}
 
 	public static class ArrayInitializerContext extends ParserRuleContext {
-		public TerminalNode SEACHAV() { return getToken(JMMParserParser.SEACHAV, 0); }
-		public TerminalNode SEFCHAV() { return getToken(JMMParserParser.SEFCHAV, 0); }
 		public List<VariableInitializerContext> variableInitializer() {
 			return getRuleContexts(VariableInitializerContext.class);
 		}
 		public VariableInitializerContext variableInitializer(int i) {
 			return getRuleContext(VariableInitializerContext.class,i);
 		}
-		public List<TerminalNode> SEVIRG() { return getTokens(JMMParserParser.SEVIRG); }
-		public TerminalNode SEVIRG(int i) {
-			return getToken(JMMParserParser.SEVIRG, i);
-		}
 		public ArrayInitializerContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_arrayInitializer; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterArrayInitializer(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitArrayInitializer(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitArrayInitializer(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ArrayInitializerContext arrayInitializer() throws RecognitionException {
@@ -1500,35 +1232,16 @@ public class JMMParserParser extends Parser {
 	}
 
 	public static class ArgumentsContext extends ParserRuleContext {
-		public TerminalNode SEAPARE() { return getToken(JMMParserParser.SEAPARE, 0); }
-		public TerminalNode SEFPARE() { return getToken(JMMParserParser.SEFPARE, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
 		}
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
 		}
-		public List<TerminalNode> SEVIRG() { return getTokens(JMMParserParser.SEVIRG); }
-		public TerminalNode SEVIRG(int i) {
-			return getToken(JMMParserParser.SEVIRG, i);
-		}
 		public ArgumentsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_arguments; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterArguments(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitArguments(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitArguments(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ArgumentsContext arguments() throws RecognitionException {
@@ -1592,19 +1305,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_type; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitType(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitType(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TypeContext type() throws RecognitionException {
@@ -1642,26 +1342,10 @@ public class JMMParserParser extends Parser {
 	}
 
 	public static class BasicTypeContext extends ParserRuleContext {
-		public TerminalNode BOOL() { return getToken(JMMParserParser.BOOL, 0); }
-		public TerminalNode CHAR() { return getToken(JMMParserParser.CHAR, 0); }
-		public TerminalNode INT() { return getToken(JMMParserParser.INT, 0); }
 		public BasicTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_basicType; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterBasicType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitBasicType(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitBasicType(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final BasicTypeContext basicType() throws RecognitionException {
@@ -1698,14 +1382,6 @@ public class JMMParserParser extends Parser {
 		public BasicTypeContext basicType() {
 			return getRuleContext(BasicTypeContext.class,0);
 		}
-		public List<TerminalNode> SEACOLC() { return getTokens(JMMParserParser.SEACOLC); }
-		public TerminalNode SEACOLC(int i) {
-			return getToken(JMMParserParser.SEACOLC, i);
-		}
-		public List<TerminalNode> SEFCOLC() { return getTokens(JMMParserParser.SEFCOLC); }
-		public TerminalNode SEFCOLC(int i) {
-			return getToken(JMMParserParser.SEFCOLC, i);
-		}
 		public QualifiedIdentifierContext qualifiedIdentifier() {
 			return getRuleContext(QualifiedIdentifierContext.class,0);
 		}
@@ -1713,19 +1389,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_referenceType; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterReferenceType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitReferenceType(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitReferenceType(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ReferenceTypeContext referenceType() throws RecognitionException {
@@ -1811,19 +1474,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_statementExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterStatementExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitStatementExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitStatementExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final StatementExpressionContext statementExpression() throws RecognitionException {
@@ -1855,19 +1505,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExpressionContext expression() throws RecognitionException {
@@ -1898,25 +1535,10 @@ public class JMMParserParser extends Parser {
 		public AssignmentExpressionContext assignmentExpression() {
 			return getRuleContext(AssignmentExpressionContext.class,0);
 		}
-		public TerminalNode OPIGUAL() { return getToken(JMMParserParser.OPIGUAL, 0); }
-		public TerminalNode OPMAISI() { return getToken(JMMParserParser.OPMAISI, 0); }
 		public AssignmentExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_assignmentExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterAssignmentExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitAssignmentExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitAssignmentExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AssignmentExpressionContext assignmentExpression() throws RecognitionException {
@@ -1968,27 +1590,10 @@ public class JMMParserParser extends Parser {
 		public EqualityExpressionContext equalityExpression(int i) {
 			return getRuleContext(EqualityExpressionContext.class,i);
 		}
-		public List<TerminalNode> OPAND() { return getTokens(JMMParserParser.OPAND); }
-		public TerminalNode OPAND(int i) {
-			return getToken(JMMParserParser.OPAND, i);
-		}
 		public ConditionalAndExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_conditionalAndExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterConditionalAndExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitConditionalAndExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitConditionalAndExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ConditionalAndExpressionContext conditionalAndExpression() throws RecognitionException {
@@ -2036,27 +1641,10 @@ public class JMMParserParser extends Parser {
 		public RelationalExpressionContext relationalExpression(int i) {
 			return getRuleContext(RelationalExpressionContext.class,i);
 		}
-		public List<TerminalNode> OPATRIB() { return getTokens(JMMParserParser.OPATRIB); }
-		public TerminalNode OPATRIB(int i) {
-			return getToken(JMMParserParser.OPATRIB, i);
-		}
 		public EqualityExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_equalityExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterEqualityExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitEqualityExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitEqualityExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final EqualityExpressionContext equalityExpression() throws RecognitionException {
@@ -2104,29 +1692,13 @@ public class JMMParserParser extends Parser {
 		public AdditiveExpressionContext additiveExpression(int i) {
 			return getRuleContext(AdditiveExpressionContext.class,i);
 		}
-		public TerminalNode INST() { return getToken(JMMParserParser.INST, 0); }
 		public ReferenceTypeContext referenceType() {
 			return getRuleContext(ReferenceTypeContext.class,0);
 		}
-		public TerminalNode OPMAIOR() { return getToken(JMMParserParser.OPMAIOR, 0); }
-		public TerminalNode OPMENOI() { return getToken(JMMParserParser.OPMENOI, 0); }
 		public RelationalExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_relationalExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterRelationalExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitRelationalExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitRelationalExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final RelationalExpressionContext relationalExpression() throws RecognitionException {
@@ -2199,31 +1771,10 @@ public class JMMParserParser extends Parser {
 		public MultiplicativeExpressionContext multiplicativeExpression(int i) {
 			return getRuleContext(MultiplicativeExpressionContext.class,i);
 		}
-		public List<TerminalNode> OPSOMA() { return getTokens(JMMParserParser.OPSOMA); }
-		public TerminalNode OPSOMA(int i) {
-			return getToken(JMMParserParser.OPSOMA, i);
-		}
-		public List<TerminalNode> OPSUBTR() { return getTokens(JMMParserParser.OPSUBTR); }
-		public TerminalNode OPSUBTR(int i) {
-			return getToken(JMMParserParser.OPSUBTR, i);
-		}
 		public AdditiveExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_additiveExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterAdditiveExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitAdditiveExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitAdditiveExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final AdditiveExpressionContext additiveExpression() throws RecognitionException {
@@ -2279,27 +1830,10 @@ public class JMMParserParser extends Parser {
 		public UnaryExpressionContext unaryExpression(int i) {
 			return getRuleContext(UnaryExpressionContext.class,i);
 		}
-		public List<TerminalNode> OPASTE() { return getTokens(JMMParserParser.OPASTE); }
-		public TerminalNode OPASTE(int i) {
-			return getToken(JMMParserParser.OPASTE, i);
-		}
 		public MultiplicativeExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_multiplicativeExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterMultiplicativeExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitMultiplicativeExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitMultiplicativeExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final MultiplicativeExpressionContext multiplicativeExpression() throws RecognitionException {
@@ -2341,11 +1875,9 @@ public class JMMParserParser extends Parser {
 	}
 
 	public static class UnaryExpressionContext extends ParserRuleContext {
-		public TerminalNode OPMAISM() { return getToken(JMMParserParser.OPMAISM, 0); }
 		public UnaryExpressionContext unaryExpression() {
 			return getRuleContext(UnaryExpressionContext.class,0);
 		}
-		public TerminalNode OPSUBTR() { return getToken(JMMParserParser.OPSUBTR, 0); }
 		public SimpleUnaryExpressionContext simpleUnaryExpression() {
 			return getRuleContext(SimpleUnaryExpressionContext.class,0);
 		}
@@ -2353,19 +1885,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_unaryExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterUnaryExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitUnaryExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitUnaryExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final UnaryExpressionContext unaryExpression() throws RecognitionException {
@@ -2427,15 +1946,12 @@ public class JMMParserParser extends Parser {
 	}
 
 	public static class SimpleUnaryExpressionContext extends ParserRuleContext {
-		public TerminalNode OPDIFEF() { return getToken(JMMParserParser.OPDIFEF, 0); }
 		public UnaryExpressionContext unaryExpression() {
 			return getRuleContext(UnaryExpressionContext.class,0);
 		}
-		public TerminalNode SEAPARE() { return getToken(JMMParserParser.SEAPARE, 0); }
 		public BasicTypeContext basicType() {
 			return getRuleContext(BasicTypeContext.class,0);
 		}
-		public TerminalNode SEFPARE() { return getToken(JMMParserParser.SEFPARE, 0); }
 		public ReferenceTypeContext referenceType() {
 			return getRuleContext(ReferenceTypeContext.class,0);
 		}
@@ -2449,19 +1965,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_simpleUnaryExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterSimpleUnaryExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitSimpleUnaryExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitSimpleUnaryExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final SimpleUnaryExpressionContext simpleUnaryExpression() throws RecognitionException {
@@ -2536,27 +2039,10 @@ public class JMMParserParser extends Parser {
 		public SelectorContext selector(int i) {
 			return getRuleContext(SelectorContext.class,i);
 		}
-		public List<TerminalNode> OPMENOSM() { return getTokens(JMMParserParser.OPMENOSM); }
-		public TerminalNode OPMENOSM(int i) {
-			return getToken(JMMParserParser.OPMENOSM, i);
-		}
 		public PostfixExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_postfixExpression; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterPostfixExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitPostfixExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitPostfixExpression(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final PostfixExpressionContext postfixExpression() throws RecognitionException {
@@ -2610,35 +2096,19 @@ public class JMMParserParser extends Parser {
 	}
 
 	public static class SelectorContext extends ParserRuleContext {
-		public TerminalNode SEPONTO() { return getToken(JMMParserParser.SEPONTO, 0); }
 		public QualifiedIdentifierContext qualifiedIdentifier() {
 			return getRuleContext(QualifiedIdentifierContext.class,0);
 		}
 		public ArgumentsContext arguments() {
 			return getRuleContext(ArgumentsContext.class,0);
 		}
-		public TerminalNode SEACOLC() { return getToken(JMMParserParser.SEACOLC, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public TerminalNode SEFCOLC() { return getToken(JMMParserParser.SEFCOLC, 0); }
 		public SelectorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_selector; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterSelector(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitSelector(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitSelector(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final SelectorContext selector() throws RecognitionException {
@@ -2698,17 +2168,13 @@ public class JMMParserParser extends Parser {
 		public ParExpressionContext parExpression() {
 			return getRuleContext(ParExpressionContext.class,0);
 		}
-		public TerminalNode THIS() { return getToken(JMMParserParser.THIS, 0); }
 		public ArgumentsContext arguments() {
 			return getRuleContext(ArgumentsContext.class,0);
 		}
-		public TerminalNode SUPE() { return getToken(JMMParserParser.SUPE, 0); }
-		public TerminalNode SEPONTO() { return getToken(JMMParserParser.SEPONTO, 0); }
 		public TerminalNode ID() { return getToken(JMMParserParser.ID, 0); }
 		public LiteralContext literal() {
 			return getRuleContext(LiteralContext.class,0);
 		}
-		public TerminalNode NEW() { return getToken(JMMParserParser.NEW, 0); }
 		public CreatorContext creator() {
 			return getRuleContext(CreatorContext.class,0);
 		}
@@ -2719,19 +2185,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_primary; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterPrimary(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitPrimary(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitPrimary(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final PrimaryContext primary() throws RecognitionException {
@@ -2866,14 +2319,6 @@ public class JMMParserParser extends Parser {
 		public ArgumentsContext arguments() {
 			return getRuleContext(ArgumentsContext.class,0);
 		}
-		public List<TerminalNode> SEACOLC() { return getTokens(JMMParserParser.SEACOLC); }
-		public TerminalNode SEACOLC(int i) {
-			return getToken(JMMParserParser.SEACOLC, i);
-		}
-		public List<TerminalNode> SEFCOLC() { return getTokens(JMMParserParser.SEFCOLC); }
-		public TerminalNode SEFCOLC(int i) {
-			return getToken(JMMParserParser.SEFCOLC, i);
-		}
 		public NewArrayDeclaratorContext newArrayDeclarator() {
 			return getRuleContext(NewArrayDeclaratorContext.class,0);
 		}
@@ -2884,19 +2329,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_creator; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterCreator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitCreator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitCreator(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CreatorContext creator() throws RecognitionException {
@@ -2993,37 +2425,16 @@ public class JMMParserParser extends Parser {
 	}
 
 	public static class NewArrayDeclaratorContext extends ParserRuleContext {
-		public List<TerminalNode> SEACOLC() { return getTokens(JMMParserParser.SEACOLC); }
-		public TerminalNode SEACOLC(int i) {
-			return getToken(JMMParserParser.SEACOLC, i);
-		}
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
 		}
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
 		}
-		public List<TerminalNode> SEFCOLC() { return getTokens(JMMParserParser.SEFCOLC); }
-		public TerminalNode SEFCOLC(int i) {
-			return getToken(JMMParserParser.SEFCOLC, i);
-		}
 		public NewArrayDeclaratorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_newArrayDeclarator; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterNewArrayDeclarator(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitNewArrayDeclarator(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitNewArrayDeclarator(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final NewArrayDeclaratorContext newArrayDeclarator() throws RecognitionException {
@@ -3101,19 +2512,6 @@ public class JMMParserParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_literal; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).enterLiteral(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JMMParserListener ) ((JMMParserListener)listener).exitLiteral(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof JMMParserVisitor ) return ((JMMParserVisitor<? extends T>)visitor).visitLiteral(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final LiteralContext literal() throws RecognitionException {
@@ -3147,7 +2545,7 @@ public class JMMParserParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3;\u01c0\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3<\u01c0\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -3183,10 +2581,10 @@ public class JMMParserParser extends Parser {
 		"\13&\3&\3&\7&\u01b9\n&\f&\16&\u01bc\13&\3\'\3\'\3\'\2\2(\2\4\6\b\n\f\16"+
 		"\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJL\2\b\5\2\5\5\23"+
 		"\25\27\27\4\2\6\7\17\17\4\2\35\35\'\'\4\2\37\37\"\"\4\2$$&&\6\2\13\13"+
-		"\21\21\32\32\679\2\u01db\2R\3\2\2\2\4e\3\2\2\2\6m\3\2\2\2\bs\3\2\2\2\n"+
-		"v\3\2\2\2\f~\3\2\2\2\16\u009b\3\2\2\2\20\u009d\3\2\2\2\22\u00a8\3\2\2"+
-		"\2\24\u00c2\3\2\2\2\26\u00c4\3\2\2\2\30\u00d1\3\2\2\2\32\u00d4\3\2\2\2"+
-		"\34\u00d8\3\2\2\2\36\u00dc\3\2\2\2 \u00e4\3\2\2\2\"\u00eb\3\2\2\2$\u00ed"+
+		"\21\21\32\328:\2\u01db\2R\3\2\2\2\4e\3\2\2\2\6m\3\2\2\2\bs\3\2\2\2\nv"+
+		"\3\2\2\2\f~\3\2\2\2\16\u009b\3\2\2\2\20\u009d\3\2\2\2\22\u00a8\3\2\2\2"+
+		"\24\u00c2\3\2\2\2\26\u00c4\3\2\2\2\30\u00d1\3\2\2\2\32\u00d4\3\2\2\2\34"+
+		"\u00d8\3\2\2\2\36\u00dc\3\2\2\2 \u00e4\3\2\2\2\"\u00eb\3\2\2\2$\u00ed"+
 		"\3\2\2\2&\u00fa\3\2\2\2(\u0109\3\2\2\2*\u010b\3\2\2\2,\u011f\3\2\2\2."+
 		"\u0121\3\2\2\2\60\u0123\3\2\2\2\62\u0125\3\2\2\2\64\u012a\3\2\2\2\66\u0132"+
 		"\3\2\2\28\u013a\3\2\2\2:\u0141\3\2\2\2<\u0149\3\2\2\2>\u0156\3\2\2\2@"+
@@ -3195,17 +2593,17 @@ public class JMMParserParser extends Parser {
 		"\2\2\2RN\3\2\2\2RS\3\2\2\2SZ\3\2\2\2TU\7\f\2\2UV\5\4\3\2VW\7\61\2\2WY"+
 		"\3\2\2\2XT\3\2\2\2Y\\\3\2\2\2ZX\3\2\2\2Z[\3\2\2\2[`\3\2\2\2\\Z\3\2\2\2"+
 		"]_\5\6\4\2^]\3\2\2\2_b\3\2\2\2`^\3\2\2\2`a\3\2\2\2ac\3\2\2\2b`\3\2\2\2"+
-		"cd\7\2\2\3d\3\3\2\2\2ej\7\63\2\2fg\7*\2\2gi\7\63\2\2hf\3\2\2\2il\3\2\2"+
+		"cd\7\2\2\3d\3\3\2\2\2ej\7\64\2\2fg\7*\2\2gi\7\64\2\2hf\3\2\2\2il\3\2\2"+
 		"\2jh\3\2\2\2jk\3\2\2\2k\5\3\2\2\2lj\3\2\2\2mn\5\b\5\2no\5\n\6\2o\7\3\2"+
 		"\2\2pr\t\2\2\2qp\3\2\2\2ru\3\2\2\2sq\3\2\2\2st\3\2\2\2t\t\3\2\2\2us\3"+
-		"\2\2\2vw\7\b\2\2wz\7\63\2\2xy\7\n\2\2y{\5\4\3\2zx\3\2\2\2z{\3\2\2\2{|"+
+		"\2\2\2vw\7\b\2\2wz\7\64\2\2xy\7\n\2\2y{\5\4\3\2zx\3\2\2\2z{\3\2\2\2{|"+
 		"\3\2\2\2|}\5\f\7\2}\13\3\2\2\2~\u0084\7,\2\2\177\u0080\5\b\5\2\u0080\u0081"+
 		"\5\16\b\2\u0081\u0083\3\2\2\2\u0082\177\3\2\2\2\u0083\u0086\3\2\2\2\u0084"+
 		"\u0082\3\2\2\2\u0084\u0085\3\2\2\2\u0085\u0087\3\2\2\2\u0086\u0084\3\2"+
-		"\2\2\u0087\u0088\7/\2\2\u0088\r\3\2\2\2\u0089\u008a\7\63\2\2\u008a\u008b"+
+		"\2\2\u0087\u0088\7/\2\2\u0088\r\3\2\2\2\u0089\u008a\7\64\2\2\u008a\u008b"+
 		"\5\26\f\2\u008b\u008c\5\20\t\2\u008c\u009c\3\2\2\2\u008d\u0090\7\33\2"+
 		"\2\u008e\u0090\5(\25\2\u008f\u008d\3\2\2\2\u008f\u008e\3\2\2\2\u0090\u0091"+
-		"\3\2\2\2\u0091\u0092\7\63\2\2\u0092\u0095\5\26\f\2\u0093\u0096\5\20\t"+
+		"\3\2\2\2\u0091\u0092\7\64\2\2\u0092\u0095\5\26\f\2\u0093\u0096\5\20\t"+
 		"\2\u0094\u0096\7\61\2\2\u0095\u0093\3\2\2\2\u0095\u0094\3\2\2\2\u0096"+
 		"\u009c\3\2\2\2\u0097\u0098\5(\25\2\u0098\u0099\5\36\20\2\u0099\u009a\7"+
 		"\61\2\2\u009a\u009c\3\2\2\2\u009b\u0089\3\2\2\2\u009b\u008f\3\2\2\2\u009b"+
@@ -3214,7 +2612,7 @@ public class JMMParserParser extends Parser {
 		"\3\2\2\2\u00a2\u00a4\3\2\2\2\u00a3\u00a1\3\2\2\2\u00a4\u00a5\7/\2\2\u00a5"+
 		"\21\3\2\2\2\u00a6\u00a9\5\34\17\2\u00a7\u00a9\5\24\13\2\u00a8\u00a6\3"+
 		"\2\2\2\u00a8\u00a7\3\2\2\2\u00a9\23\3\2\2\2\u00aa\u00c3\5\20\t\2\u00ab"+
-		"\u00ac\7\63\2\2\u00ac\u00ad\7\62\2\2\u00ad\u00c3\5\24\13\2\u00ae\u00af"+
+		"\u00ac\7\64\2\2\u00ac\u00ad\7\62\2\2\u00ad\u00c3\5\24\13\2\u00ae\u00af"+
 		"\7\r\2\2\u00af\u00b0\5\32\16\2\u00b0\u00b3\5\24\13\2\u00b1\u00b2\7\t\2"+
 		"\2\u00b2\u00b4\5\24\13\2\u00b3\u00b1\3\2\2\2\u00b3\u00b4\3\2\2\2\u00b4"+
 		"\u00c3\3\2\2\2\u00b5\u00b6\7\34\2\2\u00b6\u00b7\5\32\16\2\u00b7\u00b8"+
@@ -3228,12 +2626,12 @@ public class JMMParserParser extends Parser {
 		"\3\2\2\2\u00ca\u00c8\3\2\2\2\u00ca\u00cb\3\2\2\2\u00cb\u00ce\3\2\2\2\u00cc"+
 		"\u00ca\3\2\2\2\u00cd\u00c5\3\2\2\2\u00cd\u00ce\3\2\2\2\u00ce\u00cf\3\2"+
 		"\2\2\u00cf\u00d0\7.\2\2\u00d0\27\3\2\2\2\u00d1\u00d2\5(\25\2\u00d2\u00d3"+
-		"\7\63\2\2\u00d3\31\3\2\2\2\u00d4\u00d5\7-\2\2\u00d5\u00d6\5\60\31\2\u00d6"+
+		"\7\64\2\2\u00d3\31\3\2\2\2\u00d4\u00d5\7-\2\2\u00d5\u00d6\5\60\31\2\u00d6"+
 		"\u00d7\7.\2\2\u00d7\33\3\2\2\2\u00d8\u00d9\5(\25\2\u00d9\u00da\5\36\20"+
 		"\2\u00da\u00db\7\61\2\2\u00db\35\3\2\2\2\u00dc\u00e1\5 \21\2\u00dd\u00de"+
 		"\7)\2\2\u00de\u00e0\5 \21\2\u00df\u00dd\3\2\2\2\u00e0\u00e3\3\2\2\2\u00e1"+
 		"\u00df\3\2\2\2\u00e1\u00e2\3\2\2\2\u00e2\37\3\2\2\2\u00e3\u00e1\3\2\2"+
-		"\2\u00e4\u00e7\7\63\2\2\u00e5\u00e6\7\35\2\2\u00e6\u00e8\5\"\22\2\u00e7"+
+		"\2\u00e4\u00e7\7\64\2\2\u00e5\u00e6\7\35\2\2\u00e6\u00e8\5\"\22\2\u00e7"+
 		"\u00e5\3\2\2\2\u00e7\u00e8\3\2\2\2\u00e8!\3\2\2\2\u00e9\u00ec\5$\23\2"+
 		"\u00ea\u00ec\5\60\31\2\u00eb\u00e9\3\2\2\2\u00eb\u00ea\3\2\2\2\u00ec#"+
 		"\3\2\2\2\u00ed\u00f6\7,\2\2\u00ee\u00f3\5\"\22\2\u00ef\u00f0\7)\2\2\u00f0"+
@@ -3285,7 +2683,7 @@ public class JMMParserParser extends Parser {
 		"\2\2\2\u017d\u0174\3\2\2\2\u017d\u0179\3\2\2\2\u017eE\3\2\2\2\u017f\u0195"+
 		"\5\32\16\2\u0180\u0182\7\31\2\2\u0181\u0183\5&\24\2\u0182\u0181\3\2\2"+
 		"\2\u0182\u0183\3\2\2\2\u0183\u0195\3\2\2\2\u0184\u018b\7\30\2\2\u0185"+
-		"\u018c\5&\24\2\u0186\u0187\7*\2\2\u0187\u0189\7\63\2\2\u0188\u018a\5&"+
+		"\u018c\5&\24\2\u0186\u0187\7*\2\2\u0187\u0189\7\64\2\2\u0188\u018a\5&"+
 		"\24\2\u0189\u0188\3\2\2\2\u0189\u018a\3\2\2\2\u018a\u018c\3\2\2\2\u018b"+
 		"\u0185\3\2\2\2\u018b\u0186\3\2\2\2\u018c\u0195\3\2\2\2\u018d\u0195\5L"+
 		"\'\2\u018e\u018f\7\20\2\2\u018f\u0195\5H%\2\u0190\u0192\5\4\3\2\u0191"+

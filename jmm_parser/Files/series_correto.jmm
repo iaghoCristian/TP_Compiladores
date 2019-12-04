@@ -6,6 +6,8 @@ import java.lang.Integer;
 import java.lang.System;
 
 public class Series {
+    public static boolean myBool;
+    public static char myChar;
     public static int ARITHMETIC = 1;
     public static int GEOMETRIC = 2;
     private int a; // first term
